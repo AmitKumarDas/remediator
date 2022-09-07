@@ -38,7 +38,7 @@ _Note: kube-system namespace is used for this deployment_
 ```
 
 #### Defaults
-Note: Following defaults are represented as code (_hence cannot be copied as yaml values_)
+Note: Following defaults are represented as code (_hence should **not** be copied as-is into yaml files_)
 
 ```go
 var (

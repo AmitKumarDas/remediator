@@ -1,3 +1,5 @@
+# ** DO NOT USE THIS IN PRODUCTION. THIS IS ONLY FOR TESTING **
+
 ## Deployment Artifacts
 This folder hosts various yamls needed to apply remediator controller on a Kubernetes cluster
 

@@ -36,3 +36,21 @@ _Note: kube-system namespace is used for this deployment_
 --vagc-min-age-node-taint-keys-with-no-execute duration         Minimum age of each Node taint key(s) with NoExecute effect (default 10m0s)
 --vagc-min-delay-remove-external-attacher-finalizers duration   Delay removal of external-attacher finalizer(s)
 ```
+
+#### Defaults
+Note: Following defaults are represented as code (_hence cannot be copied as yaml values_)
+
+```go
+var (
+    DisableVolumeAttachmentReconciler        = false
+    MatchingCSIAttachers                     = []string{"csi.vsphere.vmware.com"}
+    MinAgeNodeConditionTypeReady             = time.Minute * 10
+    GarbageCollectOnNodeNotReady             = false
+    MatchingNodeTaintKeys                    = []string{""}
+    MatchingNodeTaintKeysWithNoExecute       = []string{""}
+    MinAgeNodeTaintKeysWithNoExecute         = time.Minute * 10
+    MinDelayRemoveExternalAttacherFinalizers = time.Minute * 5
+    MatchingExternalAttacherFinalizers       = []string{"external-attacher/csi-vsphere-vmware-com"}
+    MaxConcurrentReconciles                  = 1
+)
+```

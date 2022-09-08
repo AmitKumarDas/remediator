@@ -26,7 +26,7 @@ spec:
         fsGroup: 1337
       containers:
         - name: manager
-          image: amitnist/tkg-remediator:b184402
+          image: projects.registry.vmware.com/tkg/tkg-remediator:v1.0.1
           imagePullPolicy: IfNotPresent
           securityContext:
             allowPrivilegeEscalation: false
